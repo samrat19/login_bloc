@@ -1,29 +1,31 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-enum LoginState{ loggedIn, loggedOut,}
+enum LoginState { loggedIn, loggedOut ,errorLogin}
 
-class LoginEvent{}
+class LoginEvent {}
 
-class InitLoginEvent extends LoginEvent{
+class ImplementLoginEvent extends LoginEvent {
   final String emailId;
   final String password;
 
-  InitLoginEvent(this.emailId, this.password);
+  ImplementLoginEvent(
+    this.emailId,
+    this.password,
+  );
 }
 
 class LoginBloc extends Bloc<LoginEvent,LoginState>{
   @override
-  // TODO: implement initialState
   LoginState get initialState => LoginState.loggedOut;
 
   @override
   Stream<LoginState> mapEventToState(LoginEvent event) async*{
 
-    if(event is InitLoginEvent){
+    if(event is ImplementLoginEvent){
       if(event.emailId == event.password){
         yield LoginState.loggedIn;
       }else{
-        yield LoginState.loggedOut;
+        yield LoginState.errorLogin;
       }
     }
   }
