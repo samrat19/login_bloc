@@ -1,6 +1,6 @@
 # flutterlogin
 
-A new Flutter application.
+A new Flutter application Login with BLoC Pattern
 
 ## Getting Started
 
