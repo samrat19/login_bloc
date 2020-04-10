@@ -5,7 +5,7 @@ import 'package:flutterlogin/screen/error_screen.dart';
 import 'package:flutterlogin/screen/home_screen.dart';
 import 'package:flutterlogin/screen/login_screen.dart';
 
-class DeciderScreen extends StatelessWidget {
+class DeciderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LoginBloc,LoginState>(

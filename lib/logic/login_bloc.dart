@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 enum LoginState { loggedIn, loggedOut ,errorLogin}
 
-class LoginEvent {}
+abstract class LoginEvent {}
 
 class ImplementLoginEvent extends LoginEvent {
   final String emailId;

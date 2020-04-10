@@ -13,6 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final LoginBloc loginBloc = BlocProvider.of<LoginBloc>(context);
 
     return Scaffold(
